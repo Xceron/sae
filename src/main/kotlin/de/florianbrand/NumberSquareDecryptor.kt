@@ -1,3 +1,5 @@
+package de.florianbrand
+
 class NumberSquareDecryptor(private var encryptedSquare: Array<String>?) {
     /**
      * Checks whether the given input array is a solved Square.

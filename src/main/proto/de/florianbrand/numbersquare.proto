@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+
+service NumberSquare {
+  rpc GenerateNumberSquare(NumberRequest) returns (GeneratedNumberSquareReply) {}
+  rpc SolveNumberSquare(NumberSquareRequest) returns (SolvedNumberSquareReply) {}
+}
+
+message NumberRequest {
+  int32 number = 1; // max number of digits of the number square
+  optional bool leading_zeros = 2; // default is false
+}
+
+message GeneratedNumberSquareReply {
+  string number_square = 1;
+}
+
+message NumberSquareRequest {
+  string encrypted_square = 1; // Encrypted/Unsolved NumberSquare with "," as separator and letters as numbers
+}
+
+message SolvedNumberSquareReply {
+  string decrypted_square = 1; // Solved NumberSquare with "," as separator
+}

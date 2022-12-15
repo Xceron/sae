@@ -1,3 +1,5 @@
+package de.florianbrand
+
 import kotlin.math.pow
 import kotlin.random.Random
 
